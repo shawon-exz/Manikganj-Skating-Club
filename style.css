@@ -409,14 +409,28 @@ h1, h2, h3, .logo-text, .btn, .hero-tag, .p-name, .modal-name {
     box-shadow: 0 0 30px rgba(37,211,102,0.35);
 }
 
-.p-logo { margin-bottom: 18px; }
-
-.p-logo svg {
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6));
-    transition: transform 0.3s;
+/* ===== প্লেয়ার ইমেজ স্টাইল ===== */
+.p-logo {
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: center;
 }
 
-.p-card:hover .p-logo svg { transform: scale(1.15) rotate(-6deg); }
+.player-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #25d366;
+    box-shadow: 0 0 15px rgba(37,211,102,0.4);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.p-card:hover .player-img {
+    transform: scale(1.1);
+    border-color: #ff3d3d;
+    box-shadow: 0 0 20px rgba(255,61,61,0.6);
+}
 
 .p-role {
     display: inline-block;
@@ -509,7 +523,20 @@ h1, h2, h3, .logo-text, .btn, .hero-tag, .p-name, .modal-name {
 
 .modal-close:hover { color: #ff3d3d; transform: rotate(90deg); }
 
-.modal-logo { margin-bottom: 16px; animation: logoBounce 2s infinite; }
+.modal-logo { 
+    margin-bottom: 16px; 
+    display: flex;
+    justify-content: center;
+}
+
+.modal-logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffd54f;
+    box-shadow: 0 0 20px rgba(255,213,79,0.5);
+}
 
 .modal-name {
     font-size: 1.2rem;
@@ -644,4 +671,4 @@ h1, h2, h3, .logo-text, .btn, .hero-tag, .p-name, .modal-name {
     .nav-menu { display: none; }
     .hero-buttons { flex-direction: column; align-items: center; }
     .modal { padding: 35px 22px; }
-    }
+}
