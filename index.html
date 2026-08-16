@@ -10,13 +10,17 @@
 </head>
 <body>
 
+    <!-- ভাসমান শেপ (অ্যানিমেশন) -->
+    <div class="float-shape fs-1"></div>
+    <div class="float-shape fs-2"></div>
+    <div class="float-shape fs-3"></div>
+
     <!-- ব্যাকগ্রাউন্ড ট্র্যাক -->
     <div class="track-bg"></div>
 
     <!-- ===== নেভিগেশন ===== -->
     <nav class="navbar">
         <div class="container nav-flex">
-            <!-- লোগো ১: মেইন লোগো -->
             <a href="#home" class="logo">
                 <img src="logo.png" alt="Manikganj Skating Club Logo" class="logo-img">
                 <span class="logo-text">MANIKGANJ <em>SKATING CLUB</em></span>
@@ -40,19 +44,27 @@
                 <div class="hero-buttons">
                     <a href="#players" class="btn btn-red">🏆 মেইন প্লেয়ারস</a>
                     <a href="https://wa.me/8801735216049" class="btn btn-green" target="_blank">💬 WhatsApp করুন</a>
+                    <a href="player-cards.html" class="btn btn-playercards">🃏 Player Cards</a>
                 </div>
             </div>
 
-            <!-- ফাঁকা ট্র্যাক স্থান -->
-            <div class="skate-placeholder"></div>
+            <!-- অ্যানিমেটেড স্কেট ট্র্যাক -->
+            <div class="skate-track">
+                <div class="mini-skate">🛼</div>
+                <div class="mini-skate ms-2">🛼</div>
+                <div class="sparkle sp-1">✨</div>
+                <div class="sparkle sp-2">✨</div>
+                <div class="sparkle sp-3">✨</div>
+                <p class="track-label">SPEED ZONE 🏁</p>
+            </div>
         </div>
     </section>
 
-    <!-- ===== মেইন প্লেয়ারস (ক্লিক করলে ইন্টারফেস) ===== -->
+    <!-- ===== মেইন প্লেয়ারস ===== -->
     <section id="players" class="players">
         <div class="container">
             <h2 class="section-title">🏆 মেইন প্লেয়ারস</h2>
-            <p class="section-sub">নিচের কার্ডে ক্লিক করো — প্রতিটা প্লেয়ারের প্রোফাইল ও WhatsApp নাম্বার দেখতে পাবে</p>
+            <p class="section-sub">নিচের কার্ডে ক্লিক করো — প্রোফাইল, নাম্বার ও WhatsApp দেখতে পাবে</p>
 
             <div class="player-cards">
 
@@ -68,6 +80,7 @@
                     </div>
                     <span class="p-role">কোচ · COACH</span>
                     <h3 class="p-name">Md Ripon Mia</h3>
+                    <p class="p-num">📱 +880 1735-216049</p>
                     <span class="p-click">👆 ক্লিক করো</span>
                 </div>
 
@@ -83,6 +96,7 @@
                     </div>
                     <span class="p-role">টিম ক্যাপ্টেন · CAPTAIN</span>
                     <h3 class="p-name">Md Alamin Khan</h3>
+                    <p class="p-num">📱 +880 1316-299718</p>
                     <span class="p-click">👆 ক্লিক করো</span>
                 </div>
 
@@ -98,6 +112,7 @@
                     </div>
                     <span class="p-role">টিচ · TEACH</span>
                     <h3 class="p-name">Md Raihan</h3>
+                    <p class="p-num">📱 01315-252254</p>
                     <span class="p-click">👆 ক্লিক করো</span>
                 </div>
 
@@ -105,7 +120,7 @@
         </div>
     </section>
 
-    <!-- ===== প্লেয়ার প্রোফাইল ইন্টারফেস (মডাল) ===== -->
+    <!-- ===== প্লেয়ার প্রোফাইল মডাল ===== -->
     <div class="modal-overlay hidden" id="modal">
         <div class="modal">
             <button class="modal-close" onclick="closeProfile()">✕</button>
@@ -138,6 +153,7 @@
             <div class="contact-box">
                 <p class="contact-num">📱 <strong>+880 1735-216049</strong></p>
                 <a href="https://wa.me/8801735216049" class="btn btn-green" target="_blank">💬 এখনই WhatsApp করুন</a>
+                <a href="player-cards.html" class="btn btn-playercards mt-btn">🃏 সব প্লেয়ার কার্ড দেখো</a>
             </div>
         </div>
     </section>
@@ -149,5 +165,4 @@
 
     <script src="script.js"></script>
 </body>
-                                                                                                                   </html>
-                                                                                                                   
+</html>
