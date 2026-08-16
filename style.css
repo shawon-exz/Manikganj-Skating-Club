@@ -62,17 +62,10 @@ h1, h2, h3, .logo-text, .btn, .hero-tag, .p-name, .modal-name {
 }
 
 .logo-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #ff3d3d;
-    box-shadow: 0 0 10px rgba(255, 61, 61, 0.5);
-    transition: transform 0.3s ease;
-}
-
-.logo-img:hover {
-    transform: scale(1.08);
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(255,61,61,0.5));
 }
 
 .logo-text {
@@ -178,42 +171,12 @@ h1, h2, h3, .logo-text, .btn, .hero-tag, .p-name, .modal-name {
 
 .hero-buttons { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
 
-/* ===== অ্যানিমেটেড রিয়েল স্কেট (PNG) ===== */
-.skate-scene {
+/* ===== ফাঁকা স্থান (অ্যানিমেশন ডিলিট করা হয়েছে) ===== */
+.skate-placeholder {
     margin-top: 60px;
-    position: relative;
-    height: 140px;
-    overflow: hidden;
-    border-top: 2px dashed rgba(255,255,255,0.15);
-    border-bottom: 2px dashed rgba(255,255,255,0.15);
-}
-
-.skate-img {
-    width: 220px;
-    height: auto;
-    position: absolute;
-    top: 10px;
-    filter: drop-shadow(0 8px 15px rgba(255, 61, 61, 0.4));
-    animation: skateMove 5s linear infinite;
-}
-
-@keyframes skateMove {
-    0%   { left: -250px; transform: translateY(0); }
-    25%  { transform: translateY(-6px); }
-    50%  { transform: translateY(0); }
-    75%  { transform: translateY(-6px); }
-    100% { left: 110%; transform: translateY(0); }
-}
-
-.skate-speed {
-    position: absolute;
-    right: 10px;
-    top: -30px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 0.65rem;
-    color: #ff3d3d;
-    letter-spacing: 3px;
-    animation: blinkTag 1s infinite;
+    height: 110px;
+    border-top: 3px dashed rgba(255,255,255,0.15);
+    border-bottom: 3px dashed rgba(255,255,255,0.15);
 }
 
 /* ===== সেকশন টাইটেল ===== */
@@ -425,5 +388,4 @@ h1, h2, h3, .logo-text, .btn, .hero-tag, .p-name, .modal-name {
     .nav-menu { display: none; }
     .hero-buttons { flex-direction: column; align-items: center; }
     .modal { padding: 35px 22px; }
-    .skate-img { width: 170px; }
 }
