@@ -1,0 +1,429 @@
+/* ===== বেসিক ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0d0f14;
+    color: #ececec;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section { padding: 90px 0; position: relative; }
+
+h1, h2, h3, .logo-text, .btn, .hero-tag, .p-name, .modal-name {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* ===== ট্র্যাক ব্যাকগ্রাউন্ড ===== */
+.track-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(rgba(13,15,20,0.92), rgba(13,15,20,0.92)),
+        repeating-linear-gradient(0deg, transparent 0 79px, rgba(255,255,255,0.06) 79px 81px),
+        repeating-linear-gradient(90deg, transparent 0 79px, rgba(255,255,255,0.06) 79px 81px);
+}
+
+/* ===== নেভিগেশন ===== */
+.navbar {
+    background: rgba(13,15,20,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 3px solid #ff3d3d;
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff3d3d;
+    box-shadow: 0 0 10px rgba(255, 61, 61, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.08);
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo-text em {
+    display: block;
+    font-style: normal;
+    font-size: 0.6rem;
+    color: #ff3d3d;
+    letter-spacing: 3px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+.nav-menu a {
+    color: #bbb;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover { color: #ff3d3d; }
+
+/* ===== বাটন ===== */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-red {
+    background: #ff3d3d;
+    color: #fff;
+    box-shadow: 0 6px 0 #a11c1c;
+}
+
+.btn-green {
+    background: #25d366;
+    color: #0d0f14;
+    box-shadow: 0 6px 0 #128c46;
+}
+
+.btn:hover { transform: translateY(-3px); }
+.btn-red:hover { box-shadow: 0 9px 0 #a11c1c; }
+.btn-green:hover { box-shadow: 0 9px 0 #128c46; }
+
+/* ===== হিরো ===== */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at 50% 20%, rgba(255,61,61,0.12), transparent 55%);
+}
+
+.hero-tag {
+    font-size: 0.7rem;
+    color: #ff3d3d;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    animation: blinkTag 1.6s infinite;
+}
+
+@keyframes blinkTag {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+}
+
+.hero-title {
+    font-size: clamp(1.5rem, 5vw, 3.2rem);
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    text-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+}
+
+.hero-title span { color: #ff3d3d; }
+
+.hero-sub {
+    color: #aaa;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.hero-sub a { color: #25d366; text-decoration: none; font-weight: 700; }
+
+.hero-buttons { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+
+/* ===== অ্যানিমেটেড রিয়েল স্কেট (PNG) ===== */
+.skate-scene {
+    margin-top: 60px;
+    position: relative;
+    height: 140px;
+    overflow: hidden;
+    border-top: 2px dashed rgba(255,255,255,0.15);
+    border-bottom: 2px dashed rgba(255,255,255,0.15);
+}
+
+.skate-img {
+    width: 220px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    filter: drop-shadow(0 8px 15px rgba(255, 61, 61, 0.4));
+    animation: skateMove 5s linear infinite;
+}
+
+@keyframes skateMove {
+    0%   { left: -250px; transform: translateY(0); }
+    25%  { transform: translateY(-6px); }
+    50%  { transform: translateY(0); }
+    75%  { transform: translateY(-6px); }
+    100% { left: 110%; transform: translateY(0); }
+}
+
+.skate-speed {
+    position: absolute;
+    right: 10px;
+    top: -30px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.65rem;
+    color: #ff3d3d;
+    letter-spacing: 3px;
+    animation: blinkTag 1s infinite;
+}
+
+/* ===== সেকশন টাইটেল ===== */
+.section-title {
+    font-size: clamp(1.1rem, 3vw, 1.7rem);
+    text-align: center;
+    color: #ff3d3d;
+    margin-bottom: 14px;
+    letter-spacing: 2px;
+}
+
+.section-sub {
+    text-align: center;
+    color: #999;
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+/* ===== প্লেয়ার কার্ড ===== */
+.player-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+    justify-items: center;
+}
+
+.p-card {
+    width: 100%;
+    max-width: 290px;
+    background: #151922;
+    border: 3px solid #2a2f3d;
+    border-radius: 14px;
+    padding: 35px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.p-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff3d3d;
+    box-shadow: 0 0 25px rgba(255,61,61,0.25);
+}
+
+.p-logo { margin-bottom: 18px; }
+
+.p-logo svg { filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6)); }
+
+.p-role {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffd54f;
+    background: rgba(255,213,79,0.1);
+    border: 1px solid rgba(255,213,79,0.4);
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+}
+
+.p-name {
+    font-size: 0.95rem;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.p-click {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* ===== মডাল ===== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(6px);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal {
+    background: #151922;
+    border: 3px solid #ff3d3d;
+    border-radius: 16px;
+    padding: 45px 40px;
+    text-align: center;
+    max-width: 420px;
+    width: 100%;
+    position: relative;
+    animation: popIn 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-close:hover { color: #ff3d3d; }
+
+.modal-logo { margin-bottom: 16px; }
+
+.modal-name {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+}
+
+.modal-number {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #25d366;
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+}
+
+.modal-wa { display: inline-block; }
+
+.hidden { display: none; }
+
+/* ===== অ্যাবাউট ===== */
+.about { background: linear-gradient(180deg, transparent, #12151d); }
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.about-box {
+    background: #151922;
+    border: 2px solid #2a2f3d;
+    border-radius: 12px;
+    padding: 28px;
+    text-align: center;
+    font-size: 1.8rem;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.about-box:hover { border-color: #ff3d3d; transform: translateY(-5px); }
+
+.about-box h3 {
+    font-size: 0.8rem;
+    color: #fff;
+    margin: 12px 0 8px;
+    letter-spacing: 1px;
+}
+
+.about-box p { font-size: 0.9rem; color: #999; }
+
+/* ===== যোগাযোগ ===== */
+.contact { text-align: center; }
+
+.contact-box {
+    background: #151922;
+    border: 3px solid #25d366;
+    border-radius: 14px;
+    padding: 35px;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.contact-num {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* ===== ফুটার ===== */
+.footer {
+    background: #090b0f;
+    text-align: center;
+    padding: 22px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* ===== রেসপনসিভ ===== */
+@media (max-width: 700px) {
+    .nav-menu { display: none; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .modal { padding: 35px 22px; }
+    .skate-img { width: 170px; }
+}

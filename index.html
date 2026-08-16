@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manikganj Skating Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ব্যাকগ্রাউন্ড ট্র্যাক -->
+    <div class="track-bg"></div>
+
+    <!-- ===== নেভিগেশন ===== -->
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <!-- লোগো ১: মেইন লোগো -->
+            <a href="#home" class="logo">
+                <img src="logo.png" alt="Manikganj Skating Club Logo" class="logo-img">
+                <span class="logo-text">MANIKGANJ <em>SKATING CLUB</em></span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home">হোম</a></li>
+                <li><a href="#players">মেইন প্লেয়ারস</a></li>
+                <li><a href="#about">ক্লাব সম্পর্কে</a></li>
+                <li><a href="#contact">যোগাযোগ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== হিরো সেকশন ===== -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-tag">🛼 ROLLER SKATING CLUB</p>
+                <h1 class="hero-title">MANIKGANJ <span>SKATING</span> CLUB</h1>
+                <p class="hero-sub">স্পিড, স্কিল ও ডিসিপ্লিন — আমাদের পরিচয়! <br>যোগাযোগ: <a href="https://wa.me/8801735216049">+880 1735-216049</a></p>
+                <div class="hero-buttons">
+                    <a href="#players" class="btn btn-red">🏆 মেইন প্লেয়ারস</a>
+                    <a href="https://wa.me/8801735216049" class="btn btn-green" target="_blank">💬 WhatsApp করুন</a>
+                </div>
+            </div>
+
+            <!-- অ্যানিমেটেড অরিজিনাল স্কেট পিএনজি -->
+            <div class="skate-scene">
+                <img src="84874.png" alt="Speed Skate" class="skate-img">
+                <p class="skate-speed">SPEED RUNNER 🏁</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== মেইন প্লেয়ারস (ক্লিক করলে ইন্টারফেস) ===== -->
+    <section id="players" class="players">
+        <div class="container">
+            <h2 class="section-title">🏆 মেইন প্লেয়ারস</h2>
+            <p class="section-sub">নিচের কার্ডে ক্লিক করো — প্রতিটা প্লেয়ারের প্রোফাইল ও WhatsApp নাম্বার দেখতে পাবে</p>
+
+            <div class="player-cards">
+
+                <!-- প্লেয়ার ১: কোচ -->
+                <div class="p-card" onclick="openProfile(0)">
+                    <div class="p-logo">
+                        <svg viewBox="0 0 64 64" width="70" height="70">
+                            <circle cx="32" cy="32" r="30" fill="#222" stroke="#ffd54f" stroke-width="3"/>
+                            <path d="M20 30h24l-6 8H26z" fill="#ffd54f"/>
+                            <rect x="24" y="20" width="16" height="12" rx="4" fill="#ffd54f"/>
+                            <circle cx="32" cy="18" r="6" fill="#ffd54f"/>
+                        </svg>
+                    </div>
+                    <span class="p-role">কোচ · COACH</span>
+                    <h3 class="p-name">Md Ripon Mia</h3>
+                    <span class="p-click">👆 ক্লিক করো</span>
+                </div>
+
+                <!-- প্লেয়ার ২: টিম ক্যাপ্টেন -->
+                <div class="p-card" onclick="openProfile(1)">
+                    <div class="p-logo">
+                        <svg viewBox="0 0 64 64" width="70" height="70">
+                            <circle cx="32" cy="32" r="30" fill="#222" stroke="#26c6da" stroke-width="3"/>
+                            <path d="M20 36l12-14 12 14-4 12H24z" fill="#26c6da"/>
+                            <circle cx="32" cy="34" r="5" fill="#fff"/>
+                            <path d="M24 20l8-6 8 6" fill="none" stroke="#26c6da" stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <span class="p-role">টিম ক্যাপ্টেন · CAPTAIN</span>
+                    <h3 class="p-name">Md Alamin Khan</h3>
+                    <span class="p-click">👆 ক্লিক করো</span>
+                </div>
+
+                <!-- প্লেয়ার ৩: টিচ -->
+                <div class="p-card" onclick="openProfile(2)">
+                    <div class="p-logo">
+                        <svg viewBox="0 0 64 64" width="70" height="70">
+                            <circle cx="32" cy="32" r="30" fill="#222" stroke="#81c784" stroke-width="3"/>
+                            <path d="M20 44V22l12-6 12 6v22" fill="none" stroke="#81c784" stroke-width="3"/>
+                            <path d="M20 32c4-4 8-4 12 0s8 4 12 0" fill="none" stroke="#81c784" stroke-width="3"/>
+                            <path d="M32 16v28" stroke="#81c784" stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <span class="p-role">টিচ · TEACH</span>
+                    <h3 class="p-name">Md Raihan</h3>
+                    <span class="p-click">👆 ক্লিক করো</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== প্লেয়ার প্রোফাইল ইন্টারফেস (মডাল) ===== -->
+    <div class="modal-overlay hidden" id="modal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeProfile()">✕</button>
+            <div class="modal-logo" id="modalLogo"></div>
+            <span class="p-role" id="modalRole"></span>
+            <h2 class="modal-name" id="modalName"></h2>
+            <div class="modal-number" id="modalNumber"></div>
+            <a class="btn btn-green modal-wa" id="modalWhatsApp" target="_blank">💬 WhatsApp করুন</a>
+        </div>
+    </div>
+
+    <!-- ===== ক্লাব সম্পর্কে ===== -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">⛸️ ক্লাব সম্পর্কে</h2>
+            <p class="section-sub">মানিকগঞ্জের গর্ব — স্কেটিং-এ নতুন প্রজন্মের প্রশিক্ষণ ও প্রতিযোগিতার প্রস্তুতি। আমাদের লক্ষ্য: শৃঙ্খলা, গতি আর দক্ষতা।</p>
+            <div class="about-grid">
+                <div class="about-box">🎯 <h3>প্রশিক্ষণ</h3><p>নিয়মিত স্কেটিং ক্লাস ও ফিটনেস ট্রেনিং</p></div>
+                <div class="about-box">🏅 <h3>প্রতিযোগিতা</h3><p>জেলা ও জাতীয় পর্যায়ের রেসে অংশগ্রহণ</p></div>
+                <div class="about-box">🤝 <h3>টিম স্পিরিট</h3><p>একসাথে প্র্যাকটিস, একসাথে জয়</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== যোগাযোগ ===== -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">📞 যোগাযোগ</h2>
+            <p class="section-sub">স্কেট কেনার জন্য সরাসরি WhatsApp-এ মেসেজ দেন</p>
+            <div class="contact-box">
+                <p class="contact-num">📱 <strong>+880 1735-216049</strong></p>
+                <a href="https://wa.me/8801735216049" class="btn btn-green" target="_blank">💬 এখনই WhatsApp করুন</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ফুটার ===== -->
+    <footer class="footer">
+        <p>© 2026 Manikganj Skating Club — Made with 🛼 Speed & Passion</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
